@@ -13,12 +13,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         left = (Button) findViewById(R.id.left);
-        rightt = (Button) findViewById(R.id.right);
+        right = (Button) findViewById(R.id.right);
     }
 
     //reset/stop
     public void doLeft(View view){
-
+        if(isRunning) {
+            doLap();
+        }else{
+            doReset();
+        }
     }
 
     //start/lap
@@ -27,9 +31,24 @@ public class MainActivity extends AppCompatActivity {
         if(isRunning){
             right.setText("Stop");
             left.setText("Lap");
+            doStart();
         }else{
             right.setText("Start");
             left.setText("reset");
+            doStop();
         }
+    }
+
+    private void doStart(){
+
+    }
+    private void doStop(){
+
+    }
+    private void doLap(){
+
+    }
+    private void doReset(){
+
     }
 }
