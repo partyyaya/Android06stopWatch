@@ -93,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
     private void doReset(){
+        lapCount=0;
         i = 0;
         data.clear();
         adapter.notifyDataSetChanged();
@@ -111,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private class ClockTask extends TimerTask {
+
         @Override
         public void run() {
             i++;
